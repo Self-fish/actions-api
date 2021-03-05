@@ -37,6 +37,7 @@ class KafkaProducerExample {
 
     @Throws(Exception::class)
     fun runProducer(sendMessageCount: Int) {
+        System.out.println("Kafka Producer - Sending action: ")
         val producer = createProducer()
         val time = System.currentTimeMillis()
         try {
