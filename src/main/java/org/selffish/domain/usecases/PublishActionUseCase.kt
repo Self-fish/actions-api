@@ -7,10 +7,9 @@ import org.springframework.stereotype.Service
 @Service
 class PublishActionUseCase(private val repository: ActionsRepository) {
 
-    fun publish(action: ActionEvent): ActionEvent {
-        System.out.println("Use case - Sending action: " + action.action.name)
-        repository.processAction(action)
-        return action
+    fun publish() {
+        System.out.println("Use case - Sending action: ")
+        repository.processAction()
     }
 
 

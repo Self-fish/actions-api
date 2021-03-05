@@ -5,5 +5,5 @@ import org.selffish.domain.entities.ActionEvent
 
 interface ActionsRepository {
 
-    fun processAction(action: ActionEvent)
+    fun processAction()
 }

@@ -13,8 +13,8 @@ import org.springframework.web.bind.annotation.RestController
 class ActionsController(private val publishAction: PublishActionUseCase) {
 
     @RequestMapping(method = [RequestMethod.POST], consumes = [MediaType.APPLICATION_JSON_VALUE])
-    fun create(@RequestBody actionEvent: ActionEvent): ActionEvent {
-        return publishAction.publish(actionEvent)
+    fun create() {
+        publishAction.publish()
     }
 
 }
