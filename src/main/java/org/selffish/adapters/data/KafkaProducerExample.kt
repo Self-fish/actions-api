@@ -14,7 +14,7 @@ import java.util.*
 class KafkaProducerExample {
 
     private val KAFKA_TOPIC = "aquarium_actions"
-    private val BOOTSTRAP_SERVER = "localhost:9092"
+    private val BOOTSTRAP_SERVER = "192.168.0.15:9092"
 
     private fun createProducer(): Producer<Long, String> {
         val props = Properties()
