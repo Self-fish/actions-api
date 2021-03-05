@@ -6,6 +6,7 @@ import org.apache.kafka.clients.producer.ProducerConfig
 import org.apache.kafka.clients.producer.ProducerRecord
 import org.apache.kafka.common.serialization.LongSerializer
 import org.apache.kafka.common.serialization.StringSerializer
+import org.selffish.domain.entities.CustomAction
 import org.springframework.stereotype.Service
 import java.util.*
 
@@ -29,11 +30,11 @@ class CustomKafkaProducer {
     }
 
     @Throws(Exception::class)
-    fun runProducer(sendMessageCount: Int) {
+    fun runProducer(action: CustomAction) {
         val producer = createProducer()
         val time = System.currentTimeMillis()
         try {
-            val record = ProducerRecord(KAFKA_TOPIC, time, "This is a custom message")
+            val record = ProducerRecord(KAFKA_TOPIC, time, action.toString())
             producer.send(record).get()
         } finally {
             producer.flush()
