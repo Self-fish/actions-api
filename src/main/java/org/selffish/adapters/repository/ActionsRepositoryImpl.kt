@@ -9,6 +9,6 @@ import org.springframework.stereotype.Service
 class ActionsRepositoryImpl(private val producer: CustomKafkaProducer): ActionsRepository {
 
     override fun processAction(action: CustomAction) {
-        producer.runProducer(5)
+        producer.runProducer(action)
     }
 }
