@@ -1,6 +1,6 @@
 package org.selffish.framework
 
-import ActionEvent
+import org.selffish.domain.entities.ActionEvent
 import org.selffish.domain.usecases.PublishActionUseCase
 import org.springframework.http.MediaType
 import org.springframework.web.bind.annotation.RequestBody

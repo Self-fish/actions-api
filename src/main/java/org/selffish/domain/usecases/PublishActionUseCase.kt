@@ -1,7 +1,7 @@
 package org.selffish.domain.usecases
 
-import ActionEvent
 import org.selffish.domain.contracts.ActionsRepository
+import org.selffish.domain.entities.ActionEvent
 import org.springframework.stereotype.Service
 
 @Service

@@ -1,6 +1,7 @@
 package org.selffish.domain.contracts
 
-import ActionEvent
+import org.selffish.domain.entities.ActionEvent
+
 
 interface ActionsRepository {
 

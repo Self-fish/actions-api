@@ -1,6 +1,5 @@
 package org.selffish.adapters.data
 
-import ActionEvent
 import org.apache.kafka.clients.producer.KafkaProducer
 import org.apache.kafka.clients.producer.Producer
 import org.apache.kafka.clients.producer.ProducerConfig

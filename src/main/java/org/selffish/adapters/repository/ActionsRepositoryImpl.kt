@@ -1,8 +1,8 @@
 package org.selffish.adapters.repository
 
-import ActionEvent
 import org.selffish.adapters.data.KafkaProducerExample
 import org.selffish.domain.contracts.ActionsRepository
+import org.selffish.domain.entities.ActionEvent
 import org.springframework.stereotype.Service
 
 @Service
