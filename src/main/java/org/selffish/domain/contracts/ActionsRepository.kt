@@ -1,9 +1,9 @@
 package org.selffish.domain.contracts
 
-import org.selffish.domain.entities.ActionEvent
+import org.selffish.domain.entities.CustomAction
 
 
 interface ActionsRepository {
 
-    fun processAction()
+    fun processAction(action: CustomAction)
 }

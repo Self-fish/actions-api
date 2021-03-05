@@ -1,6 +1,6 @@
 package org.selffish.framework
 
-import org.selffish.domain.entities.ActionEvent
+import org.selffish.domain.entities.CustomAction
 import org.selffish.domain.usecases.PublishActionUseCase
 import org.springframework.http.MediaType
 import org.springframework.web.bind.annotation.RequestBody
@@ -13,8 +13,8 @@ import org.springframework.web.bind.annotation.RestController
 class ActionsController(private val publishAction: PublishActionUseCase) {
 
     @RequestMapping(method = [RequestMethod.POST], consumes = [MediaType.APPLICATION_JSON_VALUE])
-    fun create() {
-        publishAction.publish()
+    fun create(@RequestBody action: CustomAction): CustomAction {
+        return publishAction.publish(action)
     }
 
 }
