@@ -1,5 +1,6 @@
 package org.selffish.adapters.data
 
+import com.google.gson.Gson
 import org.apache.kafka.clients.producer.KafkaProducer
 import org.apache.kafka.clients.producer.Producer
 import org.apache.kafka.clients.producer.ProducerConfig
@@ -34,7 +35,7 @@ class CustomKafkaProducer {
         val producer = createProducer()
         val time = System.currentTimeMillis()
         try {
-            val record = ProducerRecord(KAFKA_TOPIC, time, action.toString())
+            val record = ProducerRecord(KAFKA_TOPIC, time, Gson().toJson(action))
             producer.send(record).get()
         } finally {
             producer.flush()
