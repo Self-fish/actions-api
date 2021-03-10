@@ -16,7 +16,7 @@ import java.util.*
 class CustomKafkaProducer {
 
     companion object {
-        private const val KAFKA_TOPIC = "aquarium_actions"
+        private const val KAFKA_TOPIC = "aquarium.actions.sf-000000009df9b724"
         private const val BOOTSTRAP_SERVER = "192.168.0.15:9092"
     }
 
