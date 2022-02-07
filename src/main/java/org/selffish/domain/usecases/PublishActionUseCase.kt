@@ -8,9 +8,7 @@ import org.springframework.stereotype.Service
 class PublishActionUseCase(private val repository: ActionsRepository) {
 
     fun publish(action: CustomAction): CustomAction {
-        System.out.println(action.action)
-        System.out.println(action.step)
-        //repository.processAction(action)
+        repository.processAction(action)
         return action
     }
 

@@ -9,8 +9,11 @@ enum class ActionType {
 }
 
 enum class Step {
-    EMPTY_AQUARIUM,
-    FILL_AQUARIUM,
-    TURN_OFF_LIGHT
+    COVER_UP,
+    COVER_DOWN,
+    LIGHTS_ON,
+    LIGHTS_OFF,
+    FILLING_BOMB_ON,
+    FILLING_BOMB_OFF
 }
 
